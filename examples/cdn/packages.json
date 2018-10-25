@@ -1,0 +1,20 @@
+{
+  "timestamp": "2018-10-03T15:12:00Z",
+  "packages": [
+    {
+      "destination": "application",
+      "url": "https://s3-eu-west-1.amazonaws.com/bus.dpi.ruter.no/beta/application-2018-10-03.zip",
+      "sha256": "b6dda7905fd80d198bac88cd52705ee4ef0ad2a0654df80738e501df84b5a382"
+    },
+    {
+      "destination": "application/media",
+      "url": "https://s3-eu-west-1.amazonaws.com/bus.dpi.ruter.no/beta/media-2018-10-02.zip",
+      "sha256": "04b105d1df1570a4f2b298c15df49b4e78cf48a708da6543a40b51ef066436b0"
+    },
+    {
+      "destination": "application/audio",
+      "url": "https://s3-eu-west-1.amazonaws.com/bus.dpi.ruter.no/beta/audio-2018-10-01.zip",
+      "sha256": "b71624550a9807046c969d9b9df779d561a220c933d85838eb90450d6ad16d76"
+    }
+  ]
+}

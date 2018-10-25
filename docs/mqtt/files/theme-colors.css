@@ -1,0 +1,86 @@
+.confluence_4 .aui-dropdown2 ul a:hover,	 
+.rw_header_menu > li > a:hover, 
+.rw_header_menu > li > a.active
+{
+	color:#ffffff;	
+	background: #7d060e;
+	border-color: #7d060e !important;
+}
+
+.rw_header_menu > li > a:hover .rw_icon_dropdown,
+.rw_header_menu > li > a.active .rw_icon_dropdown
+{
+	border-color:#ffffff transparent transparent;
+}
+
+.rw_menu_color:hover,
+.rw_board_item .more-link-container .more-link:hover
+{
+	background: #7d060e !important;
+	border-color: #7d060e !important;
+}
+.rw_menu_color:hover, 
+.rw_menu_color:hover span,
+.rw_board_item .more-link-container .more-link:hover span,
+.rw_board_item .more-link-container .more-link:hover span
+{
+	color:#ffffff !important;	
+}
+
+a.btn
+{
+	background:#6699cc;
+	padding:3px 10px 3px 10px;
+	text-decoration:none;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	color:#ffffff;
+}
+
+#tab-navigation li.current a { background:#6699cc; color:#fff; }
+#tab-navigation li a { color:#6699cc; }
+#tab-navigation li a:hover { background:#003366; color:#fff; }
+
+a.btn:hover, .rw_news_item_operations a:hover { background:#003366; text-decoration:none; }
+
+#com-atlassian-confluence #rw_menu_bar #search-query-submit-button:hover
+{
+	color:#ffffff;	
+	background: #7d060e;
+}
+
+a.login-link:hover, a.signup-link:hover { color:#ffffff; background:#7d060e; }
+
+.rw_icon_button_active, 
+.rw_icon_button_padded_active, 
+.rw_icon_button_28_active,
+.rw_icon_button_28.rw_active,
+.rw_icon_button_padded.rw_active
+{
+	background: #003366;
+	border:1px solid #003366;
+}
+.rw_icon_button_active:hover, 
+.rw_icon_button_padded_active:hover, 
+.rw_icon_button_28_active:hover, 
+#rw_page_breadcrumbs a.rw_breadcrumbs_link.active, 
+#rw_page_breadcrumbs a.rw_breadcrumbs_link.active:hover,
+.rw_icon_button_28.rw_active:hover,
+.rw_icon_button_padded.rw_active:hover
+{	
+	background: #7d060e;
+	border:1px solid #7d060e;
+}
+
+.ajs-content-hover .rw_user_dashboard_link:hover
+{
+	color:#ffffff;	
+	background: #7d060e;
+}
+
+#preview-header #title-text
+{
+    font-size: 24px;
+}
+ 

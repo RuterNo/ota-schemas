@@ -1,0 +1,93 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.ruter.no/mqtt-topics.json",
+  "type": "object",
+  "title": "MQTT Topics Schema",
+  "description": "List of current MQTT topics that must be bridged between bus and PTA BO",
+  "required": [
+    "timestamp",
+    "broker",
+    "topics"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "timestamp": {
+      "$id": "#/properties/timestamp",
+      "type": "string",
+      "description": "timestamp must be ISO 8601 UTC",
+      "format": "date-time"
+    },
+    "broker": {
+      "$id": "#/properties/broker",
+      "type": "string",
+      "description": "Current MQTT broker at PTA BO as an IPv4 address",
+      "format": "ipv4"
+    },
+    "topics": {
+      "$id": "#/properties/topics",
+      "type": "array",
+      "description": "List of bridged topics",
+      "items": {
+        "$id": "#/properties/topics/items",
+        "type": "object",
+        "description": "Bridged MQTT topic",
+        "required": [
+          "topic",
+          "direction",
+          "qos",
+          "localPrefix",
+          "remotePrefix"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "topic": {
+            "$id": "#/properties/topics/items/properties/topic",
+            "type": "string",
+            "description": "The topic is usually just the common part of the local and remote fragments",
+            "examples": [
+              "json",
+              "+/json"
+            ]
+          },
+          "direction": {
+            "$id": "#/properties/topics/items/properties/direction",
+            "type": "string",
+            "description": "Direction of bridge",
+            "enum": [
+              "in",
+              "out",
+              "both"
+            ]
+          },
+          "qos": {
+            "$id": "#/properties/topics/items/properties/qos",
+            "type": "integer",
+            "description": "Quality of service as defined in the MQTT standard",
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "localPrefix": {
+            "$id": "#/properties/topics/items/properties/localPrefix",
+            "type": "string",
+            "description": "The local (bus) prefix to the topic",
+            "examples": [
+              "infohub/dpi/journey/"
+            ]
+          },
+          "remotePrefix": {
+            "$id": "#/properties/topics/items/properties/remotePrefix",
+            "type": "string",
+            "description": "The remote (PTA BO) prefix to the topic with placeholders",
+            "examples": [
+              "{operator}/ruter/{vehicle_id}/itxpt/ota/dpi/journey/"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

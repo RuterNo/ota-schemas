@@ -1,0 +1,26 @@
+{
+  "eventTimestamp": "2017-10-31T08:38:02.749Z",
+  "expiryTimestamp": "2017-10-31T08:38:47.749Z",
+  "type": "ARRIVING",
+  "ref": "RUT:StopPlace:03012453",
+  "value": [
+    {
+      "encoding": "MP3",
+      "content": "ZkxhQwAAACIQABAAAAUJABtAA+gA8AB+W8FZndQvQAyjv...",
+      "speaker": "PASSENGERS",
+      "volume": 70
+    },
+    {
+      "encoding": "MP3",
+      "content": "ZkxhQwAAACIQABAAAAUJABtAA+gA8AB+W8FZndQvQAyjv...",
+      "speaker": "DRIVER",
+      "volume": 60
+    },
+    {
+      "encoding": "MP3",
+      "content": "ZkxhQwAAACIQABAAAAUJABtAA+gA8AB+W8FZndQvQAyjv...",
+      "speaker": "EXTERNAL",
+      "volume": 80
+    }
+  ]
+}

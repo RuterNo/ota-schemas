@@ -1,0 +1,63 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.ruter.no/dpi-package-manifest.json",
+  "type": "object",
+  "title": "DPI Package Manifest",
+  "description": "List of all current packages that must be downloaded and distributed to busses",
+  "required": [
+    "timestamp",
+    "packages"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "timestamp": {
+      "$id": "#/properties/timestamp",
+      "type": "string",
+      "description": "timestamp must be ISO 8601 UTC",
+      "format": "date-time"
+    },
+    "packages": {
+      "$id": "#/properties/packages",
+      "type": "array",
+      "description": "List of all packages",
+      "items": {
+        "$id": "#/properties/packages/items",
+        "type": "object",
+        "description": "Package",
+        "required": [
+          "destination",
+          "url",
+          "sha256"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "destination": {
+            "$id": "#/properties/packages/items/properties/destination",
+            "type": "string",
+            "description": "Place that package needs to be installed, where the root is always the application directory",
+            "default": "",
+            "examples": [
+              "application",
+              "application/media",
+              "application/audio"
+            ],
+            "pattern": "^application(/[a-z0-9-]+)*$"
+          },
+          "url": {
+            "$id": "#/properties/packages/items/properties/url",
+            "type": "string",
+            "description": "URL from which the package can be downloaded",
+            "format": "uri"
+          },
+          "sha256": {
+            "$id": "#/properties/packages/items/properties/sha256",
+            "type": "string",
+            "title": "The SHA 256 digest of the referenced package",
+            "pattern": "^[A-Fa-f0-9]{64}$"
+          }
+        }
+      }
+    }
+  }
+}

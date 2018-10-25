@@ -1,0 +1,149 @@
+{
+  "timestamp": "2018-10-25T11:30:00Z",
+  "broker": "127.0.0.1",
+  "topics": [{
+    "topic": "json",
+    "direction": "out",
+    "qos": 2,
+    "localPrefix": "signon/",
+    "remotePrefix": "ruter/{operator}/{vehicleid}/itxpt/ota/signon/",
+    "description": "Notify PTA BO that the bus is starting a block"
+  },
+    {
+      "topic": "json",
+      "direction": "out",
+      "qos": 2,
+      "localPrefix": "signoff/",
+      "remotePrefix": "ruter/{operator}/{vehicleid}/itxpt/ota/signoff/",
+      "description": "Notify PTA BO that the bus has completed a block"
+    },
+    {
+      "topic": "json",
+      "direction": "out",
+      "qos": 2,
+      "localPrefix": "avl/",
+      "remotePrefix": "ruter/{operator}/{vehicleid}/itxpt/ota/avl/",
+      "description": "Reporting of the bus's position, course and speed to PTA BO"
+    },
+    {
+      "topic": "+/json",
+      "direction": "out",
+      "qos": 2,
+      "localPrefix": "apc/",
+      "remotePrefix": "ruter/{operator}/{vehicleid}/itxpt/ota/apc/",
+      "description": "Report of passenger count per door to PTA BO; + is a wildcard for door number 1-10"
+    },
+    {
+      "topic": "+/json",
+      "direction": "out",
+      "qos": 2,
+      "localPrefix": "telemetry/",
+      "remotePrefix": "ruter/{operator}/{vehicleid}/itxpt/ota/telemetry/",
+      "description": "Vehicle telemetry from systems on the bus to PTA BO; + is a wildcard for telemetry id (8-digit hex number)"
+    },
+    {
+      "topic": "json",
+      "direction": "out",
+      "qos": 2,
+      "localPrefix": "stopsignal/",
+      "remotePrefix": "ruter/{operator}/{vehicleid}/itxpt/ota/stopsignal/",
+      "description": "Report of stop signal status change to PTA BO"
+    },
+    {
+      "topic": "json",
+      "direction": "out",
+      "qos": 2,
+      "localPrefix": "infohub/dpi/diagnostics/",
+      "remotePrefix": "ruter/{operator}/{vehicleid}/itxpt/ota/dpi/diagnostics/",
+      "description": "Report diagnostic information to PTA BO for a screen"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "infohub/dpi/journey/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/dpi/journey/",
+      "description": "The stops included in the bus route, with connections to other lines"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "infohub/dpi/externaldisplay/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/dpi/externaldisplay/",
+      "description": "Message to display on destination signs; usually line number and destination, with support for alternative message"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "infohub/dpi/nextstop/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/dpi/nextstop/",
+      "description": "Next stop on the bus route after leaving a stop"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "infohub/dpi/eta/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/dpi/eta/",
+      "description": "Estimated arrival at the remaining stops"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "infohub/dpi/arriving/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/dpi/arriving/",
+      "description": "Notice to passengers that the bus is approaching a stop"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "infohub/dpi/deviation/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/dpi/deviation/",
+      "description": "Notice to passengers of a deviation"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "infohub/dpi/announcement/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/dpi/announcement/",
+      "description": "Notice to passengers of a general announcement"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "infohub/dpi/audio/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/dpi/audio/",
+      "description": "Audio message to be played by the speaker system on the bus"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "infohub/dpi/c2/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/dpi/c2/",
+      "description": "Command and control messages from PTA BO"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "madt/notification/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/madt/notification/",
+      "description": "Messages from PTA BO directly to the bus driver"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "tsp/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/tsp/",
+      "description": "Message from PTA BO to be sent to VHF to ensure that the bus is prioritized at the traffic lights"
+    }
+  ]
+}
