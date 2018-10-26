@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>DPI Test Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-table.min.css" type="text/css">
+    <style type="text/css">
+        @media (max-height: 360px) {
+            body{font-size: 5px;}
+        }
+
+        @media (max-height: 540px) {
+            body{font-size: 10px;}
+        }
+    </style>
+</head>
+<body class="w-100 mw-100">
+    <div class="container w-100 mw-100">
+        <div class="row">
+            <div class="col">
+                <div class="card mt-2">
+                    <div class="card-header p-1 font-weight-bold">
+                        MQTT Topics
+                        <span id="connectionStatus" class="badge badge-warning float-right p-1">Not connected to mqtt-broker</span>
+                    </div>
+                    <div class="card-body p-1">
+                        <table id="topics" class="table table-sm"
+                               data-striped="true"
+                               data-row-style="topicsTableRowStyle">
+                            <thead>
+                                <tr>
+                                    <th scope="col p-1" data-field="localTopic">Local Topic</th>
+                                    <th scope="col p-1" data-field="count" data-align="right">Rcv'd</th>
+                                    <th scope="col p-1" data-field="lateCount" data-align="right">Late</th>
+                                    <th scope="col p-1" data-field="invalidCount" data-align="right"
+                                        data-formatter="topicsCellFormatter">Inval.</th>
+                                    <th scope="col p-1" data-field="avgLatency" data-align="right">Lat.cy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-7">
+                <div class="row h-100">
+                    <div class="col">
+                        <div class="card mt-2 w-100 h-100">
+                            <div class="card-header p-1 font-weight-bold">
+                                Validation Messages
+                            </div>
+                            <div class="card-body p-1">
+                                <table id="validationErrors" class="table table-sm bootstrapTable" data-show-header="false" data-row-style="errorTableRowStyle">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" data-field="type" data-visible="false"></th>
+                                            <th scope="col" data-field="text">Error</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-table.min.js"></script>
+    <script src="js/mqttws31.min.js"></script>
+    <script src="js/ajv.min.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/schemas.js"></script>
+    <script src="js/topics.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
