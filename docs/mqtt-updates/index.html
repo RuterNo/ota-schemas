@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>View Source</title>
+        <link rel="canonical" href="https://ruterwiki.ruter.no/pages/viewpage.action?pageId=$action.page.id">
+        <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u0022";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="index_files/batch_003.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/e59842b492d601ab1c95ca61f0ed1c84-CDN/en_GB/7202/2b917bf474320363b63231a29396d24a46356543/6b1a0bd9616beed894f84140ca66cfa6/_/download/contextbatch/css/_super/batch.css?conditionalComment=lt+IE+9" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/e59842b492d601ab1c95ca61f0ed1c84-CDN/en_GB/7202/2b917bf474320363b63231a29396d24a46356543/6b1a0bd9616beed894f84140ca66cfa6/_/download/contextbatch/css/_super/batch.css?conditionalComment=lte+IE+9" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="index_files/batch_002.css" data-wrm-key="plugin.viewsource,-_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="index_files/batch.css" data-wrm-key="page,-_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="index_files/batch_005.css" media="print" data-wrm-key="page,-_super" data-wrm-batch-type="context">
+<link type="text/css" rel="stylesheet" href="index_files/batch_004.css" data-wrm-key="editor-content,-_super" data-wrm-batch-type="context" media="all">
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/78252be7cff6fc6cea5c334d15c95ba6-CDN/en_GB/7202/2b917bf474320363b63231a29396d24a46356543/f4793cb0b38efc2a0c92dc4f2a621402/_/download/contextbatch/css/editor-content,-_super/batch.css?conditionalComment=lte+IE+9&amp;confluence.table.resizable=true&amp;confluence.view.edit.transition=true" data-wrm-key="editor-content,-_super" data-wrm-batch-type="context" media="all">
+<![endif]-->
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/s/78252be7cff6fc6cea5c334d15c95ba6-CDN/en_GB/7202/2b917bf474320363b63231a29396d24a46356543/f4793cb0b38efc2a0c92dc4f2a621402/_/download/contextbatch/css/editor-content,-_super/batch.css?confluence.table.resizable=true&amp;confluence.view.edit.transition=true&amp;ieonly=true" data-wrm-key="editor-content,-_super" data-wrm-batch-type="context" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="index_files/colors.css" media="all">
+<link type="text/css" rel="stylesheet" href="index_files/default-theme.css" media="all">
+<link type="text/css" rel="stylesheet" href="index_files/theme-colors.css" media="all">
+
+    <style>@media print {#ghostery-purple-box {display:none !important}}</style></head>
+
+    <body class="mceContentBody aui-theme-default wiki-content fullsize">
+        <p>&nbsp;</p> 
+        <h1>Introduction</h1>
+        <p>The MQTT file defines topics that must be available on the bus's MQTT 
+bridge and which will be bridged to or from Ruter's own broker. A 
+template is provided that the operators or suppliers must use to create a
+ new configuration for each specific bus. The file also specifies the 
+URL of Ruter's broker for reference only.</p><p>This file must be 
+checked daily after 16:00 and all changes must be made on all buses 
+before they start running the following day. Ruter has a deadline before
+ 16:00 to post changes.</p><p>The HTML pages provided in packages may 
+depend on changes in the topics, as we may add new topics to support new
+ features or change existing topics to point to new versions of the 
+broker.</p><p>In practice, operators will receive advanced notice that 
+topics will be changed through a beta channel. Moreover, topics are not 
+expected to be updated often.</p>
+<h1>Example</h1><p>Here we show an example of two topics, one to and one from Router.</p><table class="wysiwyg-macro" data-macro-name="code" data-macro-id="b77555b7-9db3-4d53-9b01-e14dd47ca4a8" data-macro-parameters="language=js" data-macro-schema-version="1" style="background-image: url(/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGU6bGFuZ3VhZ2U9anN9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT"><tbody><tr><td class="wysiwyg-macro-body"><pre>{
+  "timestamp": "2018-09-17T10:57:00Z",
+  "broker": "<broker address>",
+  "topics": [
+    {
+      "topic": "+/json",
+      "direction": "out",
+      "qos": 2,
+      "localPrefix": "apc/",
+      "remotePrefix": "ruter/{operator}/{vehicleid}/itxpt/ota/apc/"
+    },
+    {
+      "topic": "json",
+      "direction": "in",
+      "qos": 2,
+      "localPrefix": "infohub/dpi/journey/",
+      "remotePrefix": "{operator}/ruter/{vehicleid}/itxpt/ota/dpi/journey/"
+    }
+  ]
+}</pre></td></tr></tbody></table><h1>Content</h1><p>The examples of S3 
+in AWS include all topics defined in the tender. In addition, there are 
+some extra with "desc": "non-standard". These are topics that DPI will 
+need and are examples of how we would like to expand the topics.</p><h1>Mapping</h1><p>The
+ file follows the format used for the configuration of Mosquitto. The 
+fields are mapped below. If other MQTT bridges are used, mapping is for 
+guidance only.</p><p><img style="background-image: url(/plugins/servlet/confluence/placeholder/macro-heading?definition=e2x1Y2lkY2hhcnQ6cmljaC12aWV3ZXI9dHJ1ZXxhdXRvZml0PWZhbHNlfG5hbWU9TVFUVCB0b3BpYyBtYXBwaW5nLTQ0MC05MDMyNWQwMHx3aWR0aD02MDB8aWQ9OGVmNmNlZjktOTZjYS00N2RlLTkyY2MtN2Y2OWUwZjNlYzA2fGFsaWduPUxlZnR8aGVpZ2h0PTYwMH0&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" class="editor-inline-macro with-chrome" src="index_files/MQTT%2520topic%2520mapping-440-90325d00-0.png" data-macro-name="lucidchart" data-macro-id="6abb485e-1c71-48c9-ac96-5db09edc3fd7" data-macro-parameters="align=Left|autofit=false|height=600|id=8ef6cef9-96ca-47de-92cc-7f69e0f3ec06|name=MQTT topic mapping-440-90325d00|rich-viewer=true|width=600" data-macro-schema-version="1" width="600" height="600"></p><p>NB!</p><ol><li>If the topic is "", it must be printed as "" in the mosquitto file.</li><li>According
+ to the mosquitto.conf format, + is a wildcard for a level in the topic 
+name. This is used to account for e.g. several doors indicated by a 
+number.</li></ol><h1>Bridge Configuration</h1><p>Based on Mosquitto, we recommend that the JSON information be used to define the bridge to Ruter in a separate file.</p><p>With
+ Mosquitto, the configuration is set up in /etc/mosquitto, and 
+/etc/mosquitto/conf.d is used to define addition to the basic 
+configuration:</p><ul><li>/etc/mosquitto<ul><li>mosquitto.conf</li><li>conf.d<ul><li>ruter-bridge.conf (generated from the definitions in mqtt.conf)</li></ul></li></ul></li></ul><p>The mosquitto.conf file must contain at least:</p><table class="wysiwyg-macro" data-macro-name="code" data-macro-id="3cd36856-6b59-4249-b7f3-9e0ef93a5ae5" data-macro-parameters="language=bash" data-macro-schema-version="1" style="background-image: url(/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGU6bGFuZ3VhZ2U9YmFzaH0&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT"><tbody><tr><td class="wysiwyg-macro-body"><pre>...
+listener 1883 # tcp
+listener 9883 # websockets
+protocol websockets
+...
+include_dir /etc/mosquitto/conf.d</pre></td></tr></tbody></table><p>The ruter-bridge.conf will look like:</p><table class="wysiwyg-macro" data-macro-name="code" data-macro-id="5ccf2241-d421-4a9c-869f-e9e8d2402136" data-macro-parameters="language=bash" data-macro-schema-version="1" style="background-image: url(/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGU6bGFuZ3VhZ2U9YmFzaH0&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT"><tbody><tr><td class="wysiwyg-macro-body"><pre>#
+# Ruter MQTT Bridge
+#
+connection bus-to-authority-bridge
+try_private false
+address 34.250.54.9
+bridge_attempt_unsubscribe true
+bridge_protocol_version mqttv311
+start_type automatic
+restart_timeout 5
+bridge_insecure true
+username &lt;username&gt;
+password &lt;password&gt;
+cleansession true
+notifications false
+allow_anonymous false
+
+#
+# Bridged Topics - from mqtt.json
+#
+# topic type in/out qos shortroute longroute
+
+topic json out 2 signon/ ruter/alpha/000000/itxpt/ota/signon/
+topic json out 2 signoff/ ruter/alpha/000000/itxpt/ota/signoff/
+topic json out 2 avl/ ruter/alpha/000000/itxpt/ota/avl/
+topic +/json out 2 apc/ ruter/alpha/000000/itxpt/ota/apc/
+topic json out 2 stopsignal/ ruter/alpha/000000/itxpt/stopsignal/ # non-standard
+topic +/json out 2 telemetry/ ruter/alpha/000000/itxpt/telemetry/ # non-standard
+topic json out 2 infohub/dpi/diagnostics/ ruter/alpha/000000/itxpt/dpi/diagnostics/ # non-standard
+
+topic json in 2 infohub/dpi/journey/ alpha/ruter/000000/itxpt/ota/dpi/journey/
+topic json in 2 infohub/dpi/externaldisplay/ alpha/ruter/000000/itxpt/ota/dpi/externaldisplay/
+topic json in 2 infohub/dpi/eta/ alpha/ruter/000000/itxpt/ota/dpi/eta/
+topic json in 2 infohub/dpi/nextstop/ alpha/ruter/000000/itxpt/ota/dpi/nextstop/
+topic json in 2 infohub/dpi/arriving/ alpha/ruter/000000/itxpt/ota/dpi/arriving/
+topic json in 2 infohub/dpi/deviation/ alpha/ruter/000000/itxpt/ota/dpi/deviation/
+topic json in 2 infohub/dpi/announcement/ alpha/ruter/000000/itxpt/ota/dpi/announcement/
+topic json in 2 infohub/madt/notification/ alpha/ruter/000000/itxpt/ota/madt/notification/
+topic json in 2 infohub/dpi/connections/ alpha/ruter/000000/itxpt/ota/dpi/connections/ # non-standard
+topic json in 2 infohub/dpi/digitalsignage/ alpha/ruter/000000/itxpt/ota/dpi/digitalsignage/ # non-standard
+topic json in 2 infohub/dpi/audio/ alpha/ruter/000000/itxpt/ota/dpi/audio/ # non-standard</pre></td></tr></tbody></table><h1>Handling</h1><p><img style="background-image: url(/plugins/servlet/confluence/placeholder/macro-heading?definition=e2x1Y2lkY2hhcnQ6cmljaC12aWV3ZXI9dHJ1ZXxhdXRvZml0PXRydWV8bmFtZT1VcGRhdGUgTVFUVCBDb25maWd1cmF0aW9uLTEzMzAtNDI0ZjhhNGF8d2lkdGg9OTEwfGlkPTczMDQ1OGJkLTk1YTMtNDQ5YS1iZGQ2LWFhODQ4YjZiZjMxNHxhbGlnbj1MZWZ0fGhlaWdodD01NjB9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" class="editor-inline-macro with-chrome" src="index_files/Update%2520MQTT%2520Configuration-1330-424f8a4a-0.png" data-macro-name="lucidchart" data-macro-id="bf26a0be-f3e3-4089-9769-79d0b544929e" data-macro-parameters="align=Left|autofit=true|height=560|id=730458bd-95a3-449a-bdd6-aa848b6bf314|name=Update MQTT Configuration-1330-424f8a4a|rich-viewer=true|width=910" data-macro-schema-version="1" width="910" height="560"></p><h1>Schema</h1><p>A JSON schema will be defined for this configuration file.</p><p><br></p><p><br></p>
+        <p>&nbsp;</p>
+    
+
+</body></html>
