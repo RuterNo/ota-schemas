@@ -6,7 +6,6 @@
   "description": "List of stops for current journey in block",
   "required": [
     "eventTimestamp",
-    "routeChangeTimestamp",
     "route"
   ],
   "additionalProperties": false,
