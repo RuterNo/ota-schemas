@@ -64,8 +64,7 @@
             "description": "Encoding type",
             "enum": [
               "MP3",
-              "WAV",
-              "UNKNOWN"
+              "OPUS"
             ]
           },
           "content": {
