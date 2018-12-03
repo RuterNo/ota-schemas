@@ -5,7 +5,7 @@
   "longitude": 11.0567,
   "heading": 0.5,
   "speedOverGround": 34.5,
-  "signalQuality": "AGPS_QUALITY",
+  "signalQuality": "AGPS",
   "numberOfSatellites": 4,
   "gnssType": "GPS",
   "gnssCoordinateSystem": "WGS84",
