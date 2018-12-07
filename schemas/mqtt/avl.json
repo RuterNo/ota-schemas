@@ -97,21 +97,7 @@
       "type": "string",
       "description": "GNSS coordinate system",
       "enum": [
-        "AGPS",
-        "DGPS",
-        "ESTIMATED",
-        "GPS",
-        "NOTVALID",
-        "UNKNOWN",
-        "CH1903",
-        "ETSR89",
-        "IERS",
-        "NAD27",
-        "NAD83",
-        "WGS84",
-        "WGS72",
-        "SGS85",
-        "P90"
+        "WGS84"
       ]
     },
     "deadReckoning": {
