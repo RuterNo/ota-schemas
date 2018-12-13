@@ -77,6 +77,11 @@
       "type": "integer",
       "description": "Number of satellites"
     },
+    "horizontalDilutionOfPrecision": {
+      "$id": "#/properties/horizontalDilutionOfPrecision",
+      "type": "number",
+      "description": "Value of precision in horizontal dilution"
+    },
     "gnssType": {
       "$id": "#/properties/gnssType",
       "type": "string",
