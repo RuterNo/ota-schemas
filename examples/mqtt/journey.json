@@ -12,6 +12,7 @@
     "stopPlaces": [{
         "id":"NSR:StopPlace:3640",
         "name":"Snarøya",
+        "connections": [],
         "location":{
           "latitude":59.87848,
           "longitude":10.611647
