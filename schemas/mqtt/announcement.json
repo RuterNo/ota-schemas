@@ -27,18 +27,18 @@
       "description": "Message for one or more language",
       "additionalProperties": false,
       "patternProperties": {
-        "^[a-z]{2}([a-z]{2})?$": {
-          "$id": "#/properties/message/properties/multilingualMessage",
+        "^[a-z]{2}(-[a-z]{2})?$": {
+          "$id": "#/properties/message/patternProperties/multilingualMessage",
           "type": "object",
           "title": "A multilingual message",
           "properties": {
             "title": {
-              "$id": "#/properties/message/properties/multilingualMessage/properties/title",
+              "$id": "#/properties/message/patternProperties/multilingualMessage/properties/title",
               "type": "string",
               "description": "Title"
             },
             "text": {
-              "$id": "#/properties/message/properties/multilingualMessage/properties/text",
+              "$id": "#/properties/message/patternProperties/multilingualMessage/properties/text",
               "type": "string",
               "description": "Body text"
             }

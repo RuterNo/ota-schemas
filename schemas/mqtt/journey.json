@@ -99,11 +99,11 @@
                 "description": "Public name of stop"
               },
               "connections": {
-                "$id": "#/properties/connections",
+                "$id": "#/properties/route/properties/stopPlaces/items/properties/connections",
                 "type": "array",
                 "description": "List of connections",
                 "items": {
-                  "$id": "#/properties/connections/items",
+                  "$id": "#/properties/route/properties/stopPlaces/items/properties/connections/connection",
                   "type": "object",
                   "description": "Connection",
                   "required": [
@@ -116,25 +116,25 @@
                   "additionalProperties": false,
                   "properties": {
                     "id": {
-                      "$id": "#/properties/connections/items/properties/id",
+                      "$id": "#/properties/route/properties/stopPlaces/items/properties/connections/connection/properties/id",
                       "type": "string",
                       "description": "Line id"
                     },
                     "name": {
-                      "$id": "#/properties/connections/items/properties/name",
+                      "$id": "#/properties/route/properties/stopPlaces/items/properties/connections/connection/properties/name",
                       "type": "string",
                       "description": "Public name"
                     },
                     "publicCode": {
-                      "$id": "#/properties/connections/items/properties/publicCode",
+                      "$id": "#/properties/route/properties/stopPlaces/items/properties/connections/connection/properties/publicCode",
                       "type": "string",
                       "description": "Public code"
                     },
                     "type": {
-                      "$id": "#/properties/connections/items/properties/type",
+                      "$id": "#/properties/route/properties/stopPlaces/items/properties/connections/connection/properties/transportType",
                       "type": "string",
+                      "title": "TransportType",
                       "description": "Transport type",
-                      "default": "",
                       "enum": [
                         "BUS",
                         "TRAM",
@@ -145,13 +145,13 @@
                       ]
                     },
                     "colour": {
-                      "$id": "#/properties/connections/items/properties/colour",
+                      "$id": "#/properties/route/properties/stopPlaces/items/properties/connections/connection/properties/colour",
                       "type": "string",
                       "description": "Hex value of display colour",
                       "examples": [
                         "e60000"
                       ],
-                      "pattern": "^[0-9a-f]{6}$"
+                      "pattern": "^[0-9a-fA-F]{6}$"
                     }
                   }
                 }
