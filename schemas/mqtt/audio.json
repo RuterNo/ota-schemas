@@ -71,8 +71,7 @@
             "$id": "#/properties/value/properties/content",
             "type": "string",
             "description": "Base64-encoded audio data",
-            "contentEncoding": "base64",
-            "pattern": "[^-A-Za-z0-9+/=]|=[^=]|={3,}$"
+            "contentEncoding": "base64"
           },
           "speaker": {
             "$id": "#/properties/value/properties/speaker",
