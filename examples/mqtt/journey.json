@@ -3,24 +3,24 @@
   "routeChangeTimestamp": "2017-10-31T08:38:02.720Z",
   "route": {
     "id": "RUT:Route:31-1041",
-    "name": "Fornebu vest-Tonsenhagen",
+    "name": "Snarøya-Grorud T",
     "line": {
       "id": "RUT:Line:31",
-      "name": "Snarøya - Fornebu - Tonsenhagen - Grorud",
+      "name": "Snarøya-Grorud T",
       "publicCode": "31"
     },
     "stopPlaces": [{
-        "id": "RUT:StopPlace:02190017",
-        "name": "Fornebu vest",
+        "id":"NSR:StopPlace:3640",
+        "name":"Snarøya",
         "connections": [],
-        "location": {
-          "latitude": 12.33345,
-          "longitude": 12.33345
+        "location":{
+          "latitude":59.87848,
+          "longitude":10.611647
         }
       },
       {
-        "id": "RUT:StopPlace:03010013",
-        "name": "Jernbanetorget",
+        "id": "NSR:StopPlace:3978",
+        "name": "Tollboden",
         "connections": [{
           "id": "RUT:Line:30",
           "name": "Bygdøy via Bygdøynes",
@@ -35,8 +35,8 @@
           "colour": "0b91ef"
         }],
         "location": {
-          "latitude": 12.33345,
-          "longitude": 12.33345
+          "latitude": 59.90933,
+          "longitude": 10.750133
         }
       }
     ]

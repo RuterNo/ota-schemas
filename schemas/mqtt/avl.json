@@ -64,18 +64,23 @@
       "type": "string",
       "description": "Signal quality",
       "enum": [
-        "AGPS_QUALITY",
-        "DGPS_QUALITY",
-        "ESTIMATED_QUALITY",
-        "GPS_QUALITY",
-        "NOT_VALID_QUALITY",
-        "UNKNOWN_QUALITY"
+        "AGPS",
+        "DGPS",
+        "ESTIMATED",
+        "GPS",
+        "NOTVALID",
+        "UNKNOWN"
       ]
     },
     "numberOfSatellites": {
       "$id": "#/properties/numberOfSatellites",
       "type": "integer",
       "description": "Number of satellites"
+    },
+    "horizontalDilutionOfPrecision": {
+      "$id": "#/properties/horizontalDilutionOfPrecision",
+      "type": "number",
+      "description": "Value of precision in horizontal dilution"
     },
     "gnssType": {
       "$id": "#/properties/gnssType",
@@ -88,8 +93,8 @@
         "BEIDOU",
         "IRNSS",
         "OTHER",
-        "DEAD_RECKONING",
-        "MIXED_GNSS_TYPES"
+        "DEADRECKONING",
+        "MIXEDGNSSTYPES"
       ]
     },
     "gnssCoordinateSystem": {
@@ -97,11 +102,7 @@
       "type": "string",
       "description": "GNSS coordinate system",
       "enum": [
-        "WGS84",
-        "AGPS",
-        "DGPS",
-        "ESTIMATED",
-        "GPS_COORDINATE_SYSTEM"
+        "WGS84"
       ]
     },
     "deadReckoning": {
