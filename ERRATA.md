@@ -15,7 +15,7 @@ changed field	| avl/json | changed enum values of signalQuality to remove redund
 changed field	| avl/json	| changed enum values of gnssType to align with naming in ITxPT
 documentation	| stopsignal/json	| state explicitly that stop signal messages should also be sent when the signal is turned off.
 documentation	| telemetry/json	| some extraneous detail about FMS-to-IP has been removed.
-|documentation | vehicle id	defined vehicle id as VIN
+|documentation | vehicle id	| defined vehicle id as VIN
 documentation	| sender and recipient	| defined sender and recipient as PTO id assigned by PTA
 documentation	| tsp/json	| added example of encoded value
 documentation	| infohub/dpi/externaldisplay/json	| make clear that alternativeText will be used and is intended for the second line of the display. Example was updated.
