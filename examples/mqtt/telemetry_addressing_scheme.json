@@ -1,0 +1,11 @@
+[
+  {
+    "id": "01000001",
+    "payloads": [
+      {
+        "name": "All doors closed",
+        "value": "true/false"
+      }
+    ]
+  }
+]
