@@ -6,7 +6,8 @@
   "description": "Notification that vehicle has a new next stop",
   "required": [
     "eventTimestamp",
-    "stopPlaceId"
+    "stopPlaceId",
+    "index"
   ],
   "additionalProperties": false,
   "properties": {
@@ -20,6 +21,11 @@
       "$id": "#/properties/stopPlaceId",
       "type": "string",
       "description": "Stop place id"
+    },
+    "index": {
+      "$id": "#/properties/index",
+      "type": "integer",
+      "description": "Index of stop place in journey data"
     }
   }
 }
