@@ -21,7 +21,7 @@
       "$id": "#/properties/stopPlaceId",
       "type": "string",
       "description": "Stop place id"
-    }},
+    },
     "index": {
       "$id": "#/properties/index",
       "type": "integer",
