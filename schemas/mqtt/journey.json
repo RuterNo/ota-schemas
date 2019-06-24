@@ -84,7 +84,9 @@
               "id",
               "name",
               "connections",
-              "location"
+              "location",
+              "forAlighting",
+              "forBoarding"
             ],
             "additionalProperties": false,
             "properties": {
@@ -181,6 +183,16 @@
                     "maximum": 180.0000
                   }
                 }
+              },
+              "forAlighting": {
+                "$id": "#/properties/route/properties/stopPlaces/items/properties/forAlighting",
+                "type": "boolean",
+                "description": "Indicates if the stop place supports passenger disembarkment. "
+              },
+              "forBoarding": {
+                "$id": "#/properties/route/properties/stopPlaces/items/properties/forBoarding",
+                "type": "boolean",
+                "description": "Indicates if the stop place supports passenger embarkment."
               }
             }
           }
