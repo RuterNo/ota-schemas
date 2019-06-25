@@ -16,9 +16,7 @@
         "location":{
           "latitude":59.87848,
           "longitude":10.611647
-        },
-      "forAlighting": false,
-      "forBoarding": true
+        }
       },
       {
         "id": "NSR:StopPlace:3978",
@@ -39,9 +37,7 @@
         "location": {
           "latitude": 59.90933,
           "longitude": 10.750133
-        },
-        "forAlighting": true,
-        "forBoarding": false
+        }
       }
     ]
   }
