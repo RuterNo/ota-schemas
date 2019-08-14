@@ -23,6 +23,7 @@
       "type": "string",
       "description": "Urgency of the message",
       "enum": [
+        "URGENT",
         "HIGH",
         "MEDIUM",
         "LOW"
