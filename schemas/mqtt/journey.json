@@ -185,12 +185,12 @@
               "description": {
                 "$id": "#/properties/route/properties/stopPlaces/items/properties/description",
                 "type": "string",
-                "description": "Description for the stop"
+                "description": "Description for travelers"
               },
               "publicCode": {
                 "$id": "#/properties/route/properties/stopPlaces/items/properties/publicCode",
                 "type": "string",
-                "description": "Public code for a stop, also referred to as puck"
+                "description": "Public code for a stop"
               }
             }
           }
