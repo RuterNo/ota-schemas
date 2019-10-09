@@ -1,28 +1,15 @@
 {
-  "eventTimestamp": "2018-10-31T12:45:50Z",
-  "screenId": "ad71dba8-c881-11e8-a8d5-f2801f1b9fd1",
-  "type": "STATUS",
-  "payload": {
-    "version": {
-      "application": "2018-10-03T12:45:50Z",
-      "media": "2018-10-05T12:45:50Z"
-    },
-    "display": {
-      "type": "1",
-      "res": {
-        "height": 360,
-        "width": 1080
-      }
-    },
-    "stats": {
-      "logEntries": {
-        "error": 0,
-        "warning": 14,
-        "info": 123
-      },
-      "lastLoaded": "2018-10-31T12:45:45Z",
-      "pingFreq": 3600,
-      "usedStorage": "124kb"
-    }
-  }
+	"eventTimestamp": "2019-10-09T10:16:07.000Z",
+	"clientId": "638f47b7-d0d4-4043-9125-2dd8db6b8a84",
+	"type": "HEARTBEAT",
+	"payload": {
+		"client": {
+			"version": "2019-08-16T08-11-58Z",
+			"display": "1",
+			"windowHeight": 1080,
+			"windowWidth": 1920
+			
+		},
+		"routeId": "RUT:Route:0-54012"
+	}
 }
