@@ -181,6 +181,16 @@
                     "maximum": 180.0000
                   }
                 }
+              },
+              "description": {
+                "$id": "#/properties/route/properties/stopPlaces/items/properties/description",
+                "type": "string",
+                "description": "Description for travelers"
+              },
+              "publicCode": {
+                "$id": "#/properties/route/properties/stopPlaces/items/properties/publicCode",
+                "type": "string",
+                "description": "Public code for a stop"
               }
             }
           }

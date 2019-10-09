@@ -19,6 +19,17 @@
         }
       },
       {
+        "id":"NSR:StopPlace:59462",
+        "name": "Breidablikk",
+        "connections": [],
+        "location":{
+          "latitude": 60.773394,
+          "longitude": 11.116319
+        },
+        "description": "i Stangevegen",
+        "publicCode": "A"
+      },
+      {
         "id": "NSR:StopPlace:3978",
         "name": "Tollboden",
         "connections": [{
