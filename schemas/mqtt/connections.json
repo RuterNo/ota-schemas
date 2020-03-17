@@ -259,7 +259,7 @@
                       "departureTime": {
                         "$id": "#/properties/calls/items/properties/connections/items/properties/departures/items/properties/departureTime",
                         "type": "string",
-                        "description": "Expected departure time for UTC in ISO 8861 date/time format",
+                        "description": "Expected departure time for UTC in ISO 8601 date/time format",
                         "examples": [
                           "2020-03-10T21:02:00Z"
                         ]
@@ -267,7 +267,7 @@
                       "delay": {
                         "$id": "#/properties/calls/items/properties/connections/items/properties/departures/items/properties/delay",
                         "type": "string",
-                        "description": "Recorded delay for the departure in ISO 8861 duration format",
+                        "description": "Recorded delay for the departure in ISO 8601 duration format",
                         "examples": [
                           "PT0S"
                         ]
