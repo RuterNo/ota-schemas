@@ -1,0 +1,135 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "required": [
+        "paymentMethod",
+        "mediaType",
+        "venderId",
+        "eventTimestamp",
+        "tickets"
+    ],
+    "properties": {
+        "paymentMethod": {
+            "$id": "#/properties/paymentMethod",
+            "type": "integer",
+            "title": "Payment method for sale"
+        },
+        "mediaType": {
+            "$id": "#/properties/mediaType",
+            "type": "integer",
+            "title": "Media type for sale"
+        },
+        "venderId": {
+            "$id": "#/properties/venderId",
+            "type": "string",
+            "title": "Vender ID for sale"
+        },
+        "eventTimestamp": {
+            "$id": "#/properties/eventTimestamp",
+            "type": "string",
+            "title": "Time of sale"
+        },
+        "tickets": {
+            "$id": "#/properties/tickets",
+            "type": "array",
+            "title": "Tickets sold in this sale",
+            "items": {
+                "$id": "#/properties/tickets/items",
+                "type": "object",
+                "title": "Ticket",
+                "required": [
+                    "nrOfZonesToPay",
+                    "passengers",
+                    "price",
+                    "startDate",
+                    "zoneFrom",
+                    "zoneTo",
+                    "zoneVia",
+                    "externalId",
+                    "productTemplateId",
+                    "selectedZones"
+                ],
+                "properties": {
+                    "nrOfZonesToPay": {
+                        "$id": "#/properties/tickets/items/properties/nrOfZonesToPay",
+                        "type": "integer",
+                        "title": "Number of zones to be paid for in this ticket"
+                    },
+                    "passengers": {
+                        "$id": "#/properties/tickets/items/properties/passengers",
+                        "type": "array",
+                        "title": "Passengers in this Ticket",
+                        "items": {
+                            "$id": "#/properties/tickets/items/properties/passengers/items",
+                            "type": "object",
+                            "title": "Passenger",
+                            "required": [
+                                "nrOfPassengers",
+                                "productId",
+                                "profileId"
+                            ],
+                            "properties": {
+                                "nrOfPassengers": {
+                                    "$id": "#/properties/tickets/items/properties/passengers/items/properties/nrOfPassengers",
+                                    "type": "integer",
+                                    "title": "The quantity of this Passenger type"
+                                },
+                                "productId": {
+                                    "$id": "#/properties/tickets/items/properties/passengers/items/properties/productId",
+                                    "type": "integer",
+                                    "title": "The ID of the product for this Passenger"
+                                },
+                                "profileId": {
+                                    "$id": "#/properties/tickets/items/properties/passengers/items/properties/profileID",
+                                    "type": "integer",
+                                    "title": "The ID of the profile of this Passenger"
+                                }
+                            }
+                        }
+                    },
+                    "price": {
+                        "$id": "#/properties/tickets/items/properties/price",
+                        "type": "integer",
+                        "title": "The price of this ticket"
+                    },
+                    "startDate": {
+                        "$id": "#/properties/tickets/items/properties/startDate",
+                        "type": "string",
+                        "title": "Start date of this ticket"
+                    },
+                    "zoneFrom": {
+                        "$id": "#/properties/tickets/items/properties/zoneFrom",
+                        "type": "string",
+                        "title": "This tickets From zone"
+                    },
+                    "zoneTo": {
+                        "$id": "#/properties/tickets/items/properties/zoneTo",
+                        "type": "string",
+                        "title": "This tickets To zone"
+                    },
+                    "zoneVia": {
+                        "$id": "#/properties/tickets/items/properties/zoneVia",
+                        "title": "This tickets Via zone"
+                    },
+                    "externalID": {
+                        "$id": "#/properties/tickets/items/properties/externalID",
+                        "type": "string",
+                        "title": "External ID of this Ticket"
+                    },
+                    "productTemplateID": {
+                        "$id": "#/properties/tickets/items/properties/productTemplateID",
+                        "type": "integer",
+                        "title": "Product Template ID of this Ticket"
+                    },
+                    "selectedZones": {
+                        "$id": "#/properties/tickets/items/properties/selectedZones",
+                        "title": "The selected zones for this ticket (only applies to additional tickets)"
+                    }
+                }
+            }
+        }
+    }
+}

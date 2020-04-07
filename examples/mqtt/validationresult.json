@@ -1,0 +1,20 @@
+{
+  "buzzerCommand": {
+    "duration": 60,
+    "frequency": 784,
+    "pause": 50,
+    "repeat": 4
+  },
+  "eventTimestamp": "2020-04-07T08:30:12.560Z",
+  "inspectionResult": {
+    "code": 411,
+    "message": "Validering feilet - Feil sone ",
+    "validity": "INVALID"
+  },
+  "ledCommand": {
+    "color": "red",
+    "duration": 5000,
+    "pause": 50,
+    "repeat": 1
+  }
+}
