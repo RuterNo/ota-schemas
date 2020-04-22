@@ -1,13 +1,13 @@
 {
   "paymentMethod": 45,
   "mediaType": 4,
-  "venderId": "x130",
+  "vendorId": "x130",
   "eventTimestamp": "2020-04-07T06:45:29.804Z",
   "tickets": [{
     "externalId": "28fbf258-91e3-4a7c-8710-6bdc665020e8",
-    "nrOfZonesToPay": 1,
+    "numberOfZonesToPay": 1,
     "passengers": [{
-      "nrOfPassengers": 1,
+      "numberOfPassengers": 1,
       "productId": 21526,
       "profileId": 1
     }],

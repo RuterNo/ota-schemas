@@ -1,8 +1,9 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://example.com/example.json",
-    "type": "object",
-    "title": "Validation Result MQTT Schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.ruter.no/validationresult.json",
+  "type": "object",
+  "title": "Validationresult MQTT Message",
+  "description": "Result of validation made with the RuterSalg application",
     "required": [
         "eventTimestamp",
         "buzzerCommand",

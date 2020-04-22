@@ -1,13 +1,13 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://example.com/example.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://schema.ruter.no/saleresult.json",
     "type": "object",
-    "title": "The Root Schema",
-    "description": "The root schema comprises the entire JSON document.",
+    "title": "Saleresult MQTT Message",
+    "description": "Result of sale made with the RuterSalg application",
     "required": [
         "paymentMethod",
         "mediaType",
-        "venderId",
+        "vendorId",
         "eventTimestamp",
         "tickets"
     ],
@@ -22,10 +22,10 @@
             "type": "integer",
             "title": "Media type for sale"
         },
-        "venderId": {
-            "$id": "#/properties/venderId",
+        "vendorId": {
+            "$id": "#/properties/vendorId",
             "type": "string",
-            "title": "Vender ID for sale"
+            "title": "Vendor ID for sale"
         },
         "eventTimestamp": {
             "$id": "#/properties/eventTimestamp",
@@ -41,7 +41,7 @@
                 "type": "object",
                 "title": "Ticket",
                 "required": [
-                    "nrOfZonesToPay",
+                    "numberOfZonesToPay",
                     "passengers",
                     "price",
                     "startDate",
@@ -53,8 +53,8 @@
                     "selectedZones"
                 ],
                 "properties": {
-                    "nrOfZonesToPay": {
-                        "$id": "#/properties/tickets/items/properties/nrOfZonesToPay",
+                    "numberOfZonesToPay": {
+                        "$id": "#/properties/tickets/items/properties/numberOfZonesToPay",
                         "type": "integer",
                         "title": "Number of zones to be paid for in this ticket"
                     },
@@ -67,13 +67,13 @@
                             "type": "object",
                             "title": "Passenger",
                             "required": [
-                                "nrOfPassengers",
+                                "numberOfPassengers",
                                 "productId",
                                 "profileId"
                             ],
                             "properties": {
-                                "nrOfPassengers": {
-                                    "$id": "#/properties/tickets/items/properties/passengers/items/properties/nrOfPassengers",
+                                "numberOfPassengers": {
+                                    "$id": "#/properties/tickets/items/properties/passengers/items/properties/numberOfPassengers",
                                     "type": "integer",
                                     "title": "The quantity of this Passenger type"
                                 },
@@ -126,8 +126,15 @@
                     },
                     "selectedZones": {
                         "$id": "#/properties/tickets/items/properties/selectedZones",
-                        "title": "The selected zones for this ticket (only applies to additional tickets)"
-                    }
+                        "type": ["array", "null"],
+                        "title": "Selected zones (for additional tickets only)",
+                        "additionalItems": true,
+                        "items": {
+                            "$id": "#/properties/tickets/items/properties/selectedZones/items",
+                            "type": "string",
+                            "title": "Name of selected zone"
+                        }
+                    },
                 }
             }
         }
