@@ -107,7 +107,7 @@
                     },
                     "zoneTo": {
                         "$id": "#/properties/tickets/items/properties/zoneTo",
-                        "type": "string",
+                        "type": ["string", "null"],
                         "title": "This tickets To zone"
                     },
                     "zoneVia": {
