@@ -1,8 +1,10 @@
 {
-   "eventTimestamp":"2020-04-22T10:30:03.548Z",
+   "eventTimestamp":"2020-04-28T13:49:50.814Z",
    "nfcReaderConnected":false,
    "printerConnected":true,
    "nodAvailable":true,
    "sapiAvailable":false,
-   "loggedIn":true
+   "loggedIn":true,
+   "journeyRef":"RUT:Line:440",
+   "stopPlaceId":"NSR:StopPlace:59734"
 }

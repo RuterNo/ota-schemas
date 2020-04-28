@@ -49,5 +49,16 @@
             "type": "string",
             "description": "Last status message from printer"
         }
+        ,
+        "journeyRef": {
+            "$id": "#/properties/journeyRef",
+            "type": "string",
+            "description": "Last JourneyRef obtained by the app"
+        },
+        "stopPlaceId": {
+            "$id": "#/properties/printerStatus",
+            "type": "string",
+            "description": "StopPlaceId obtained in NextStop that triggered this diagnostics message"
+        }
     }
 }
