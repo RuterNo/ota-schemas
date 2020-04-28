@@ -1,0 +1,8 @@
+{
+   "eventTimestamp":"2020-04-22T10:30:03.548Z",
+   "nfcReaderConnected":false,
+   "printerConnected":true,
+   "nodAvailable":true,
+   "sapiAvailable":false,
+   "loggedIn":true
+}
