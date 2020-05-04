@@ -13,12 +13,12 @@
     "journeyRef": {
       "$id": "#/properties/journeyRef",
       "type": "string",
-      "description": "Ruters internal Journey reference"
+      "description": "Ruter's internal journey reference"
     },
     "journeyId": {
       "$id": "#/properties/journeyId",
       "type": "string",
-      "description": "Journey id"
+      "description": "Ruter's external journey id"
     },
     "eventTimestamp": {
       "$id": "#/properties/eventTimestamp",
