@@ -10,6 +10,16 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "journeyRef": {
+      "$id": "#/properties/journeyRef",
+      "type": "string",
+      "description": "The unique Journey reference"
+    },
+    "journeyId": {
+      "$id": "#/properties/journeyId",
+      "type": "string",
+      "description": "The unique Journey id from TPS"
+    },
     "eventTimestamp": {
       "$id": "#/properties/eventTimestamp",
       "type": "string",
