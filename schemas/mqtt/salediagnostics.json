@@ -50,10 +50,10 @@
             "description": "Last status message from printer"
         }
         ,
-        "journeyRef": {
-            "$id": "#/properties/journeyRef",
+        "journeyId": {
+            "$id": "#/properties/journeyId",
             "type": "string",
-            "description": "Last JourneyRef obtained by the app"
+            "description": "Last journeyId obtained by the app"
         },
         "stopPlaceId": {
             "$id": "#/properties/printerStatus",
