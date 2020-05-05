@@ -1,5 +1,7 @@
 {
   "eventTimestamp": "2017-10-31T08:38:02.749Z",
+  "journeyId": "RUT:ServiceJourney:31-117215-13227462",
+  "journeyRef": "31001-2019-02-17T21:55:00+01:00",
   "routeChangeTimestamp": "2017-10-31T08:38:02.720Z",
   "route": {
     "id": "RUT:Route:31-1041",
