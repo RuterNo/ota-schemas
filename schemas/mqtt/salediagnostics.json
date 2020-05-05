@@ -14,7 +14,7 @@
     "additionalProperties": false,
     "properties": {
         "eventTimestamp": {
-            "$id": "#/properties/timestamp",
+            "$id": "#/properties/eventTimestamp",
             "type": "string",
             "description": "Time of diagnostics generated",
             "format": "date-time"
@@ -56,7 +56,7 @@
             "description": "Last journeyId obtained by the app"
         },
         "stopPlaceId": {
-            "$id": "#/properties/printerStatus",
+            "$id": "#/properties/stopPlaceId",
             "type": "string",
             "description": "StopPlaceId obtained in NextStop that triggered this diagnostics message"
         }
