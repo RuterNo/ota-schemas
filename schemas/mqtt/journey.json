@@ -10,21 +10,21 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "journeyRef": {
-      "$id": "#/properties/journeyRef",
+    "eventTimestamp": {
+      "$id": "#/properties/eventTimestamp",
       "type": "string",
-      "description": "Ruter's internal journey reference"
+      "description": "Event Timestamp must be ISO 8601 UTC",
+      "format": "date-time"
     },
     "journeyId": {
       "$id": "#/properties/journeyId",
       "type": "string",
       "description": "Ruter's external journey id"
     },
-    "eventTimestamp": {
-      "$id": "#/properties/eventTimestamp",
+    "journeyRef": {
+      "$id": "#/properties/journeyRef",
       "type": "string",
-      "description": "Event Timestamp must be ISO 8601 UTC",
-      "format": "date-time"
+      "description": "Ruter's internal journey reference"
     },
     "routeChangeTimestamp": {
       "$id": "#/properties/routeChangeTimestamp",
