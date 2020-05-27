@@ -5,6 +5,6 @@
    "nodAvailable":true,
    "sapiAvailable":false,
    "loggedIn":true,
-   "journeyId": "RUT:ServiceJourney:31-117215-13227462",
+   "journeyRef": "42911-2020-05-25T16:42:00+02:00",
    "stopPlaceId":"NSR:StopPlace:59734"
 }
