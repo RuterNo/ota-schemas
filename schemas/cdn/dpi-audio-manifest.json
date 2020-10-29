@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "Schema for a manifest that defines which audio resources are available and required",
+  "examples": [
+    {
+      "timestamp": "2020-10-28T20:41:23Z",
+      "environment": "prod",
+      "requiredAfterTimestamp": "2020-10-29T05:00:00+02:00",
+      "audioTypes": {
+        "stopRequested": {
+          "url": "https://bus-dpi.transhub.io/resources/stop-requested-2020-10-28T19-37-00Z.mp3",
+          "contentType": "audio/mpeg",
+          "sha256": "f11de09c99b36f6097355c560d219716fc66857475f248b5196382830d5ba06a",
+          "version": "2020-10-28T19:37:00Z",
+          "originalName": "bell3_stereo_256"
+        }
+      }
+    }
+  ],
+  "required": [
+    "timestamp",
+    "environment",
+    "audioTypes"
+  ],
+  "properties": {
+    "timestamp": {
+      "$id": "#/properties/timestamp",
+      "type": "string",
+      "title": "The timestamp schema",
+      "description": "Timestamp of the manifest",
+      "default": "",
+      "examples": [
+        "2020-10-28T20:41:23Z"
+      ]
+    },
+    "environment": {
+      "$id": "#/properties/environment",
+      "type": "string",
+      "title": "The environment schema",
+      "description": "The environment in which the manifest is valid.",
+      "default": "",
+      "examples": [
+        "test",
+        "stage",
+        "prod"
+      ]
+    },
+    "requiredAfterTimestamp": {
+      "$id": "#/properties/requiredAfterTimestamp",
+      "type": "string",
+      "title": "The requiredAfterTimestamp schema",
+      "description": "Time after which the use of the audio resources is required, usually the following day at 5 am local time.",
+      "default": "",
+      "examples": [
+        "2020-10-29T05:00:00+02:00"
+      ]
+    },
+    "audioTypes": {
+      "$id": "#/properties/audioTypes",
+      "type": "object",
+      "title": "The audioTypes schema",
+      "description": "A dictionary of named audio resources.",
+      "default": {},
+      "examples": [
+        {
+          "stopRequested": {
+            "url": "https://bus-dpi.transhub.io/resources/stop-requested-2020-10-28T19-37-00Z.mp3",
+            "contentType": "audio/mpeg",
+            "sha256": "f11de09c99b36f6097355c560d219716fc66857475f248b5196382830d5ba06a",
+            "version": "2020-10-28T19:37:00Z",
+            "originalName": "bell3_stereo_256"
+          }
+        }
+      ],
+      "additionalProperties": {
+        "$ref": "AudioType"
+      }
+    }
+  },
+  "definitions": {
+    "AudioType": {
+      "type": "object",
+      "additionalProperties": false,
+      "$id": "#/definitions/AudioType",
+      "title": "The audio type schema",
+      "description": "Defines the audio resource's properties",
+      "required": [
+        "url",
+        "contentType",
+        "sha256",
+        "version"
+      ],
+      "properties": {
+        "url": {
+          "$id": "#/definitions/AudioType/properties/url",
+          "type": "string",
+          "title": "The url schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "https://bus-dpi.transhub.io/resources/stop-requested-2020-10-28T19-37-00Z.mp3"
+          ]
+        },
+        "contentType": {
+          "$id": "#/definitions/AudioType/properties/contentType",
+          "type": "string",
+          "title": "The contentType schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "audio/mpeg"
+          ]
+        },
+        "sha256": {
+          "$id": "#/definitions/AudioType/properties/sha256",
+          "type": "string",
+          "title": "The sha256 schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "f11de09c99b36f6097355c560d219716fc66857475f248b5196382830d5ba06a"
+          ]
+        },
+        "version": {
+          "$id": "#/definitions/AudioType/properties/version",
+          "type": "string",
+          "title": "The version schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "2020-10-28T19:37:00Z"
+          ]
+        },
+        "originalName": {
+          "$id": "#/definitions/AudioType/properties/originalName",
+          "type": "string",
+          "title": "The originalName schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "bell3_stereo_256"
+          ]
+        }
+      }
+    }
+  }
+}
