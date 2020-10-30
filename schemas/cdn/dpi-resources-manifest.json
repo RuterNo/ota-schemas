@@ -3,6 +3,7 @@
     "$ref": "#/definitions/DPIResourcesManifest",
     "definitions": {
         "DPIResourcesManifest": {
+            "title": "DPIResourcesManifest"
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -24,10 +25,10 @@
                 "environment",
                 "resources",
                 "timestamp"
-            ],
-            "title": "DPIResourcesManifest"
+            ]
         },
         "Resource": {
+            "title": "Resource",
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -65,8 +66,7 @@
                 "url",
                 "sha256",
                 "version"
-            ],
-            "title": "Resource"
+            ]
         }
     }
 }
