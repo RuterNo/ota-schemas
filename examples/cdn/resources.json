@@ -3,13 +3,13 @@
   "environment": "prod",
   "resources": [ 
     {
-      "name": "stopRequested",
+      "name": "stopRequestedSound",
       "type": "audio",
       "url" : "https://bus-dpi.transhub.io/resources/stop-requested-2020-10-28T19-37-00Z.mp3",
       "contentType": "audio/mpeg",
       "sha256" : "f11de09c99b36f6097355c560d219716fc66857475f248b5196382830d5ba06a",
       "version" : "2020-10-28T19:37:00Z",
-      "originalName": "bell3_stereo_256"
+      "description": "bell3_stereo_256"
     }
   ]
 }
