@@ -134,7 +134,7 @@
                             "type": "string",
                             "title": "Name of selected zone"
                         }
-                    },
+                    }
                 }
             }
         }

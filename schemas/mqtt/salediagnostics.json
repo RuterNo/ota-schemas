@@ -9,7 +9,7 @@
         "printerConnected",
         "nodAvailable",
         "sapiAvailable",
-        "loggedIn",
+        "loggedIn"
     ],
     "additionalProperties": false,
     "properties": {
