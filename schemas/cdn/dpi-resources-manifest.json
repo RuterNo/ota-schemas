@@ -1,9 +1,10 @@
 {
+    "description": "Schema that defines a manifest containing a list of resources provided by Ruter to operators for specific purposes",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$ref": "#/definitions/DPIResourcesManifest",
+    "$ref": "#/definitions/Root",
     "definitions": {
-        "DPIResourcesManifest": {
-            "title": "DPIResourcesManifest"
+        "Root": {
+            "title": "Root",
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -43,10 +44,7 @@
                 },
                 "url": {
                     "type": "string",
-                    "format": "uri",
-                    "qt-uri-protocols": [
-                        "https"
-                    ]
+                    "format": "uri"
                 },
                 "sha256": {
                     "type": "string"
