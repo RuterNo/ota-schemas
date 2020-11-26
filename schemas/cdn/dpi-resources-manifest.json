@@ -1,0 +1,70 @@
+{
+    "description": "Schema that defines a manifest containing a list of resources provided by Ruter to operators for specific purposes",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$ref": "#/definitions/Root",
+    "definitions": {
+        "Root": {
+            "title": "Root",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "environment": {
+                    "type": "string"
+                },
+                "resources": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Resource"
+                    }
+                }
+            },
+            "required": [
+                "environment",
+                "resources",
+                "timestamp"
+            ]
+        },
+        "Resource": {
+            "title": "Resource",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "contentType": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "sha256": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "type",                
+                "contentType",
+                "url",
+                "sha256",
+                "version"
+            ]
+        }
+    }
+}
