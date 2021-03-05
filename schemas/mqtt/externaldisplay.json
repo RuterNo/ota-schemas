@@ -6,7 +6,6 @@
   "description": "Notification that the external displays should show new destination information",
   "required": [
     "eventTimestamp",
-    "publicCode",
     "destination"
   ],
   "additionalProperties": false,
